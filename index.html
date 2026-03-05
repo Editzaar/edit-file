@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Editzaar | Premium Post-Production Agency</title>
+   
+   <style>
+    /* GLOBAL RESET & THEME */
+    :root {
+        --accent-yellow: #f1c40f;
+        --bg-black: #050505;
+        --card-bg: #111;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-black);
+        color: #fff;
+        line-height: 1.6;   
+        overflow-x: hidden;
+    }
+
+    /* ANIMATIONS */
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
+        40% {transform: translateX(-50%) translateY(-10px);}
+        60% {transform: translateX(-50%) translateY(-5px);}
+    }
+
+    @keyframes logoSlide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    /* PORTFOLIO GRID - DESKTOP FIRST */
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 5%;
+    }
+
+    .portfolio-item {
+        background: var(--card-bg);
+        border: 1px solid #222;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+        transform: translateY(-10px);
+        border-color: var(--accent-yellow);
+    }
+
+   /* VISIBILITY FIX FOR MOBILE */
+        @media (max-width: 768px) {
+            #about, #work, #work-horizontal, #feedback {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                height: auto !important;
+                padding: 60px 5% !important;
+            }
+            h1 { font-size: 3rem !important; }
+        }
+
+    /* LOGO CAROUSEL LOGIC */
+    .logo-marquee-wrapper {
+        display: flex;
+        width: 200%;
+        animation: logoSlide 25s linear infinite;
+    }
+</style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+<img src="/src/images/logo.png" alt="Editzaar Logo" style="height: 50px; width: auto; display: block;">        <div class="nav-links">
+
+    <nav style="display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: #0d0d0d; border-bottom: 1px solid #222; position: sticky; top: 0; z-index: 1000;">
+        <div class="logo" style="font-weight: 800; font-size: 1.5rem; color: #fff; letter-spacing: -1px;">
+            EDIT<span style="color: #f1c40f;">ZAAR</span>
+        </div>
+        <div style="display: flex; gap: 30px;">
+            <a href="#work" style="color: #f5f2f2; text-decoration: none; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2px;">Work</a>
+            <a href="#about" style="color: #ede8e8; text-decoration: none; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2px;">About</a>
+            <a href="https://wa.link/pz3w3p" target="_blank" style="color: #f1c40f; text-decoration: none; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2px;">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="position: relative; height: 50vh; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #0d0d0d; text-align: center;">
+        
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 200px; background: radial-gradient(circle, rgba(241, 196, 15, 0.1) 0%, rgba(0,0,0,0) 70%); filter: blur(80px); z-index: 1;"></div>
+
+        <div style="position: relative; z-index: 2; width: 100%; max-width: 1200px; padding: 0 5%;">
+            
+            <div style="display: inline-block; padding: 5px 15px; border: 1px solid #f0e9e9; border-radius: 20px; font-size: 0.8rem; color: #eae6e6; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; background: rgba(255,255,255,0.02);">
+                Based in Hyderabad • Serving Globally
+            </div>
+
+            <h1 style="font-size: clamp(3rem, 12vw, 7.5rem); line-height: 0.85; margin: 0 0 30px; font-weight: 900; letter-spacing: -5px; color: #fff;">
+                EDIT<span style="color: #f1c40f;">ZAAR</span>
+            </h1>
+
+            <div style="max-width: 750px; margin: 0 auto 50px;">
+                <p style="font-size: clamp(1.1rem, 3vw, 1.6rem); color: #fedd03; line-height: 1.5; font-weight: 300;">
+                    Whether you're a <span style="color: #fff; font-weight: 500;">Creators, Brands,</span> or <span style="color: #fff; font-weight: 500;">Businesses</span> we craft videos that build trust, authority, and influence.
+                </p>
+            </div>
+
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; align-items: center;">
+                <a href="https://wa.link/pz3w3p" target="_blank" style="background: #000000; color: #f1c40f; padding: 18px 45px; border-radius: 5px; text-decoration: none; font-weight: 800; font-size: 1.1rem; transition: 0.3s; box-shadow: 0 10px 30px rgba(241, 196, 15, 0.2);">
+                    START A PROJECT
+                </a>
+                <a href="#work" style="color: #fff; padding: 18px 45px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border: 1px solid #333; border-radius: 5px; background: rgba(255,255,255,0.03); transition: 0.3s;">
+                    VIEW PORTFOLIO
+                </a>
+            </div>
+
+        </div>
+
+        <div style="position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%); color: #fbf6f6; font-size: 0.7rem; letter-spacing: 5px; text-transform: lowercase; animation: bounce 2s infinite;">
+            Scroll to explore
+        </div>
+    </header>
+<style>
+    /* 1. GLOBAL & MOBILE STYLES (Default Carousel) */
+    .portfolio-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        gap: 15px !important;
+        padding: 20px 5% !important;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .portfolio-grid::-webkit-scrollbar { display: none; }
+
+    .portfolio-item {
+        flex: 0 0 85% !important;
+        scroll-snap-align: start;
+        min-height: 250px !important;
+    }
+
+    /* Force all hidden sections to show on mobile */
+    #work-horizontal, #feedback, #about, #work {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+    }
+
+    /* 2. FEEDBACK ANIMATION */
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-320px * 3 - 20px * 3)); }
+    }
+
+    .marquee-wrapper {
+        display: flex;
+        gap: 20px;
+        animation: scroll 30s linear infinite;
+        width: max-content;
+    }
+
+    /* 3. DESKTOP STYLES (Fixed Bracket Logic) */
+    @media (min-width: 900px) {
+        .portfolio-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            overflow-x: hidden !important;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 25px !important;
+        }
+        .portfolio-item {
+            flex: none !important;
+            width: 100% !important;
+        }
+        .hero {
+            height: 100vh !important;
+        }
+    }
+</style>
+
+
+    <section id="about" style="padding: 25px 8%; background: #0d0d0d; position: relative; overflow: hidden; border-top: 1px solid #1a1a1a;">
+        
+        <div style="position: absolute; top: -10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(241, 196, 15, 0.04) 0%, rgba(0,0,0,0) 70%); filter: blur(60px); z-index: 1;"></div>
+
+        <div style="max-width: 1100px; margin: 0 auto; position: relative; z-index: 2;">
+            
+            </div>
+
+            <h2 style="font-size: clamp(2.2rem, 5vw, 3.5rem); color: #fff; line-height: 1.1; margin-bottom: 50px; font-weight: 800; letter-spacing: -1.5px; max-width: 900px; text-align: left;">
+                Precision in Every Frame. <br>
+                <span style="color: #444;">Power in Every Story.</span>
+            </h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 80px; align-items: start; text-align: left;">
+                
+                <div style="color: #999; font-size: 1.15rem; line-height: 1.8; font-weight: 300;">
+                    <p style="margin-bottom: 25px;">
+                        <strong style="color: #fff; font-weight: 700;">EDITZAAR</strong> is a high-performance post-production studio crafting documentary-grade visuals for the next generation of global creators.
+                    </p>
+                    <p>
+                        We merge cinematic storytelling with behavioral editing psychology — ensuring every second holds attention and builds measurable authority.
+                    </p>
+                     <p>
+                        We merge cinematic storytelling with behavioral editing psychology — ensuring every second holds attention and builds measurable authority.
+                    </p>
+                </div>
+
+                <div style="display: grid; gap: 20px;">
+                    <div style="padding: 30px; background: #111; border: 1px solid #222; border-radius: 12px; transition: 0.4s ease;" onmouseover="this.style.borderColor='#f1c40f'; this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='#222'; this.style.transform='translateY(0)'">
+                        <h4 style="color: #f1c40f; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Finance Mastery</h4>
+                        <p style="color: #777; font-size: 0.9rem; line-height: 1.6; margin: 0;">Specialized editing for complex financial narratives and high-authority market documentaries.</p>
+                    </div>
+                    <div style="padding: 30px; background: #111; border: 1px solid #222; border-radius: 12px; transition: 0.4s ease;" onmouseover="this.style.borderColor='#f1c40f'; this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='#222'; this.style.transform='translateY(0)'">
+                        <h4 style="color: #f1c40f; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Real Estate Focus</h4>
+                        <p style="color: #777; font-size: 0.9rem; line-height: 1.6; margin: 0;">Cinematic property tours engineered for the luxury market, showcasing impact in every frame.</p>
+                    </div>
+                    <div style="padding: 30px; background: #111; border: 1px solid #222; border-radius: 12px; transition: 0.4s ease;" onmouseover="this.style.borderColor='#f1c40f'; this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='#222'; this.style.transform='translateY(0)'">
+                        <h4 style="color: #f1c40f; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Real Estate Focus</h4>
+                        <p style="color: #777; font-size: 0.9rem; line-height: 1.6; margin: 0;">Cinematic property tours engineered for the luxury market, showcasing impact in every frame.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="work" style="padding: 60px 5%; background: #0d0d0d; text-align: center;">
+        <h2 style="font-size: 2.3rem; margin-bottom: 20px;">Sample <span style="color: var(--accent-yellow);">Works</span></h2>
+        
+        <div class="portfolio-grid">
+            
+            <div class="portfolio-item">
+                <video width="100%" loop playsinline onmouseover="this.play()" onmouseout="this.pause();" style="display: block; cursor: pointer;">
+                    <source src="/src/videos/video1.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow);">Documentary </h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">High-retention edit</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <video width="100%" loop playsinline onmouseover="this.play()" onmouseout="this.pause();" style="display: block; cursor: pointer;">
+                    <source src="/src/videos/video2.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow);">Reel sample</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Deep-dive storytelling.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <video width="100%" loop playsinline onmouseover="this.play()" onmouseout="this.pause();" style="display: block; cursor: pointer;">
+                    <source src="/src/videos/video3.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow);">Marriage reel</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Every frame tells their love story</p>
+                </div>
+            </div>
+             <div class="portfolio-item">
+                <video width="100%" loop playsinline onmouseover="this.play()" onmouseout="this.pause();" style="display: block; cursor: pointer;">
+                    <source src="/src/videos/video4.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow);">Documentary </h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">High-retention edit</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <video width="100%" loop playsinline onmouseover="this.play()" onmouseout="this.pause();" style="display: block; cursor: pointer;">
+                    <source src="/src/videos/video5.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow);">Reel sample</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Deep-dive storytelling.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <video width="100%" loop playsinline onmouseover="this.play()" onmouseout="this.pause();" style="display: block; cursor: pointer;">
+                    <source src="/src/videos/video6.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow);">Marriage reel</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Every frame tells their love story</p>
+                </div>
+            </div>
+             <div class="portfolio-item">
+                <video width="100%" loop playsinline onmouseover="this.play()" onmouseout="this.pause();" style="display: block; cursor: pointer;">
+                    <source src="/src/videos/video7.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow);">Documentary </h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">High-retention edit</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <video width="100%" loop playsinline onmouseover="this.play()" onmouseout="this.pause();" style="display: block; cursor: pointer;">
+                    <source src="/src/videos/hostital1.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow);">Reel sample</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Deep-dive storytelling.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <video width="100%" loop playsinline onmouseover="this.play()" onmouseout="this.pause();" style="display: block; cursor: pointer;">
+                    <source src="/src/videos/video9.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow);">Marriage reel</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Every frame tells their love story</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="work-horizontal" style="padding: 40px 5%; background: #0d0d0d; text-align: center; border-top: 1px solid #222;">
+        
+        <h2 style="font-size: 1.8rem; margin-bottom: 30px; color: #fff;">Long Video <span style="color: var(--accent-yellow);">Showcases</span></h2>
+
+        <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+            
+            <div class="portfolio-item" style="border-radius: 6px; border: 1px solid #333; overflow: hidden; background: #1a1a1a; transition: 0.3s;">
+                <video width="100%" loop playsinline onmouseover="this.play(); this.muted=false;" onmouseout="this.pause(); this.muted=true;" style="display: block; cursor: pointer; aspect-ratio: 16 / 9; object-fit: cover;">
+                    <source src="/src/videos/long1.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow); font-size: 1.1rem;">Timeline Breakdown</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Professional 1920x1080 post-production workflow.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" style="border-radius: 12px; border: 1px solid #333; overflow: hidden; background: #1a1a1a; transition: 0.3s;">
+                <video width="100%" loop playsinline onmouseover="this.play(); this.muted=false;" onmouseout="this.pause(); this.muted=true;" style="display: block; cursor: pointer; aspect-ratio: 16 / 9; object-fit: cover;">
+                    <source src="/src/videos/long2.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow); font-size: 1.1rem;">Finance Documentary</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Long-form storytelling for high-authority brands.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" style="border-radius: 12px; border: 1px solid #333; overflow: hidden; background: #1a1a1a; transition: 0.3s;">
+                <video width="100%" loop playsinline onmouseover="this.play(); this.muted=false;" onmouseout="this.pause(); this.muted=true;" style="display: block; cursor: pointer; aspect-ratio: 16 / 9; object-fit: cover;">
+                    <source src="/src/videos/long3.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow); font-size: 1.1rem;">Finance Documentary</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Long-form storytelling for high-authority brands.</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" style="border-radius: 12px; border: 1px solid #333; overflow: hidden; background: #1a1a1a; transition: 0.3s;">
+                <video width="100%" loop playsinline onmouseover="this.play(); this.muted=false;" onmouseout="this.pause(); this.muted=true;" style="display: block; cursor: pointer; aspect-ratio: 16 / 9; object-fit: cover;">
+                    <source src="/src/videos/long4.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow); font-size: 1.1rem;">Finance Documentary</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Long-form storytelling for high-authority brands.</p>
+                </div>
+            </div>
+            <div class="portfolio-item" style="border-radius: 12px; border: 1px solid #333; overflow: hidden; background: #1a1a1a; transition: 0.3s;">
+                <video width="100%" loop playsinline onmouseover="this.play(); this.muted=false;" onmouseout="this.pause(); this.muted=true;" style="display: block; cursor: pointer; aspect-ratio: 16 / 9; object-fit: cover;">
+                    <source src="/src/videos/long5.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow); font-size: 1.1rem;">Finance Documentary</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Long-form storytelling for high-authority brands.</p>
+                </div>
+            </div>
+            <div class="portfolio-item" style="border-radius: 12px; border: 1px solid #333; overflow: hidden; background: #1a1a1a; transition: 0.3s;">
+                <video width="100%" loop playsinline onmouseover="this.play(); this.muted=false;" onmouseout="this.pause(); this.muted=true;" style="display: block; cursor: pointer; aspect-ratio: 16 / 9; object-fit: cover;">
+                    <source src="/src/videos/long6.mp4" type="video/mp4">
+                </video>
+                <div style="padding: 15px; text-align: left;">
+                    <h4 style="margin: 0; color: var(--accent-yellow); font-size: 1.1rem;">Finance Documentary</h4>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #a6a6a6;">Long-form storytelling for high-authority brands.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+<section style="background: #0d0d0d; border-top: 1px solid #f7e4e4; padding: 25px 0; overflow: hidden; width: 100%;">
+    <p style="text-align: center; color: #ffffff; font-family: monospace; font-size: 10px; letter-spacing: 3px; margin-bottom: 15px; text-transform: uppercase;">PARTNERSHIPS</p>
+    
+    <div style="display: flex; width: 100%; animation: logoSlide 50s linear infinite;">
+        <div style="display: flex; justify-content: space-around; width: 100%; align-items: center; gap: 70px;">
+            <img src="/src/images/s1.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s2.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s3.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s4.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s5.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s6.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s7.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s8.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s9.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s10.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s11.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s12.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s13.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s14.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s15.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s16.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s17.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s18.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s19.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="/src/images/s20.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+
+        </div>
+    </div>
+
+    <style>
+       /* Animation for the Feedback Carousel */
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-320px * 3 - 20px * 3)); }
+    }
+
+    .marquee-wrapper {
+        display: flex;
+        gap: 20px;
+        animation: scroll 60s linear infinite;
+        width: max-content;
+    }
+
+    /* Pause animation on hover for readability */
+    .marquee-wrapper:hover {
+        animation-play-state: paused;
+    }
+    </style>
+</section>
+
+<section id="feedback" style="padding: 60px 0; background: #0d0d0d; overflow: hidden; position: relative; border-top: 1px solid #111;">
+        
+        <div style="text-align: center; margin-bottom: 40px; padding: 0 5%;">
+            <h2 style="font-size: 1.8rem; color: #fff; font-weight: 800;">Trusted by <span style="color: var(--accent-yellow);">Industry Leaders</span></h2>
+            <p style="color: #444; font-family: monospace; letter-spacing: 2px; font-size: 0.7rem; margin-top: 8px;"> Client Feedback</p>
+        </div>
+
+        <div class="marquee-wrapper" style="display: flex; gap: 20px; animation: scroll 40s linear infinite; width: max-content;">
+            
+            <div class="feedback-node" style="width: 320px; background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 25px; border-radius: 8px; backdrop-filter: blur(10px);">
+                <div style="color: var(--accent-yellow); margin-bottom: 12px; font-size: 0.7rem;">★★★★★</div>
+                <p style="color: #999; font-style: italic; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">"Editzaar understands finance content very well. The visuals, graphs, and pacing make my videos easy to understand and more engaging"</p>
+                <div style="border-top: 1px solid #222; padding-top: 15px;">
+                    <h4 style="color: #fff; margin: 0; font-size: 0.8rem; text-transform: uppercase;">Finance Creator</h4>
+                </div>
+            </div>
+
+            <div class="feedback-node" style="width: 320px; background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 25px; border-radius: 8px; backdrop-filter: blur(10px);">
+                <div style="color: var(--accent-yellow); margin-bottom: 12px; font-size: 0.7rem;">★★★★★</div>
+                <p style="color: #999; font-style: italic; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">"Editzaar presented our project in a very premium and structured way. The walkthrough, text highlights, and music selection were perfect."</p>
+                <div style="border-top: 1px solid #222; padding-top: 15px;">
+                    <h4 style="color: #fff; margin: 0; font-size: 0.8rem; text-transform: uppercase;">Real Estate Developer</h4>
+                </div>
+            </div>
+
+            <div class="feedback-node" style="width: 320px; background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 25px; border-radius: 8px; backdrop-filter: blur(10px);">
+                <div style="color: var(--accent-yellow); margin-bottom: 12px; font-size: 0.7rem;">★★★★★</div>
+                <p style="color: #999; font-style: italic; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">"Editzaar understood the creative vision perfectly and enhanced it through subtle, thoughtful editing."</p>
+                <div style="border-top: 1px solid #222; padding-top: 15px;">
+                    <h4 style="color: #fff; margin: 0; font-size: 0.8rem; text-transform: uppercase;">Creative Director</h4>
+                </div>
+            </div>
+              <div class="feedback-node" style="width: 320px; background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 25px; border-radius: 8px; backdrop-filter: blur(10px);">
+                <div style="color: var(--accent-yellow); margin-bottom: 12px; font-size: 0.7rem;">★★★★★</div>
+                <p style="color: #999; font-style: italic; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">"Editzaar helped us present complex topics in a very simple and engaging way."</p>
+                <div style="border-top: 1px solid #222; padding-top: 15px;">
+                    <h4 style="color: #fff; margin: 0; font-size: 0.8rem; text-transform: uppercase;">Education & Knowledge</h4>
+                </div>
+            </div>
+            <div class="feedback-node" style="width: 320px; background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 25px; border-radius: 8px; backdrop-filter: blur(10px);">
+                <div style="color: var(--accent-yellow); margin-bottom: 12px; font-size: 0.7rem;">★★★★★</div>
+                <p style="color: #999; font-style: italic; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">"Editzaar helped us present our products in a very clean and premium way. The response on ads and reels improved."</p>
+                <div style="border-top: 1px solid #222; padding-top: 15px;">
+                    <h4 style="color: #fff; margin: 0; font-size: 0.8rem; text-transform: uppercase;">D2C, Retail & Commerce</h4>
+                </div>
+            </div>
+            <div class="feedback-node" style="width: 320px; background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 25px; border-radius: 8px; backdrop-filter: blur(10px);">
+                <div style="color: var(--accent-yellow); margin-bottom: 12px; font-size: 0.7rem;">★★★★★</div>
+                <p style="color: #999; font-style: italic; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">"Strong understanding of branding, rhythm, and visual language."</p>
+                <div style="border-top: 1px solid #222; padding-top: 15px;">
+                    <h4 style="color: #fff; margin: 0; font-size: 0.8rem; text-transform: uppercase;">Media, Marketing & Creative</h4>
+                </div>
+            </div>
+            <div class="feedback-node" style="width: 320px; background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 25px; border-radius: 8px; backdrop-filter: blur(10px);">
+                <div style="color: var(--accent-yellow); margin-bottom: 12px; font-size: 0.7rem;">★★★★★</div>
+                <p style="color: #999; font-style: italic; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">"Our audience engagement improved after upgrading the visuals."</p>
+                <div style="border-top: 1px solid #222; padding-top: 15px;">
+                    <h4 style="color: #fff; margin: 0; font-size: 0.8rem; text-transform: uppercase;">Health, Wellness & Lifestyle</h4>
+                </div>
+            </div>
+            <div class="feedback-node" style="width: 320px; background: rgba(255,255,255,0.02); border: 1px solid #222; padding: 25px; border-radius: 8px; backdrop-filter: blur(10px);">
+                <div style="color: var(--accent-yellow); margin-bottom: 12px; font-size: 0.7rem;">★★★★★</div>
+                <p style="color: #999; font-style: italic; font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">"Editzaar captured our special moments beautifully. Every emotion was perfectly edited."</p>
+                <div style="border-top: 1px solid #222; padding-top: 15px;">
+                    <h4 style="color: #fff; margin: 0; font-size: 0.8rem; text-transform: uppercase;">Events, Wedding & Entertainment</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </section>
+<a href="https://wa.link/pz3w3p" 
+       style="position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; padding: 10px 15px; border-radius: 15px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; gap: 10px; transition: 0.3s;" 
+       target="_blank"
+       onmouseover="this.style.transform='scale(1.1)'"
+       onmouseout="this.style.transform='scale(1)'">
+       <span style="font-size: 20px;">  😎</span> whatsapp
+    </a>
+   <section id="about" style="padding: 60px 8%; background: #0d0d0d; border-top: 1px solid #222; text-align: left;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            
+            <h2 style="font-size: 1.8rem; line-height: 1.2; margin-bottom: 20px; font-weight: 700; color: #fff;">
+                Precision in Every Frame. <span style="color: var(--accent-yellow);">Power in Every Story.</span>
+            </h2>
+
+            <div style="max-width: 800px; color: #888; font-size: 1rem; line-height: 1.5;">
+                <p style="margin-bottom: 15px;">
+                    <strong style="color: #eee;">EDITZAAR</strong> is a high-performance post-production studio crafting documentary-grade visuals and retention-driven digital content for creators and brands worldwide.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    We merge cinematic storytelling with behavioral editing psychology — ensuring every second holds attention, builds authority, and drives measurable growth.
+                </p>
+                <p style="color: #666; font-size: 0.9rem; font-style: italic;">
+                    Because in today’s market, content is everywhere. <span style="color: var(--accent-yellow);">Impact is rare.</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    
+<footer style="padding: 60px 5% 40px; background: #0d0d0d; text-align: center; border-top: 1px solid #222;">
+        
+        <div style="margin-bottom: 30px; display: flex; gap: 40px; justify-content: center; align-items: center;">
+            
+            <a href="https://www.instagram.com/edi_tzaar?igsh=MXM2d3ZydzJranRzNw==" target="_blank" style="text-decoration: none; transition: 0.3s; display: flex; flex-direction: column; align-items: center;">
+                <img src="/src/images/social.png" alt="Instagram" style="width: 30px; height: 30px; margin-bottom: 10px; filter: grayscale(100%) invert(1);">
+                <span style="font-size: 0.7rem; color: #E1306C; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Instagram</span>
+            </a>
+            
+            <a href="https://www.facebook.com/profile.php?id=61588111180702" target="_blank" style="text-decoration: none; transition: 0.3s; display: flex; flex-direction: column; align-items: center;">
+                <img src="/src/images/facebook.png" alt="Facebook" style="width: 30px; height: 30px; margin-bottom: 10px; filter: grayscale(100%) invert(1);">
+                <span style="font-size: 0.7rem; color: #109cf9; text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">Facebook</span>
+            </a>
+
+        </div>
+
+        <p style="color: #444; font-size: 0.8rem; letter-spacing: 1px; margin-top: 20px;">
+            &copy; 2026 EDITZAAR POST-PRODUCTION. HYDERABAD, INDIA.
+        </p>
+    </footer>
+
+</body>
+</html>
+
