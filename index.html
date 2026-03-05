@@ -57,17 +57,30 @@
         border-color: var(--accent-yellow);
     }
 
-   /* VISIBILITY FIX FOR MOBILE */
-        @media (max-width: 768px) {
-            #about, #work, #work-horizontal, #feedback {
-                display: block !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-                height: auto !important;
-                padding: 60px 5% !important;
-            }
-            h1 { font-size: 3rem !important; }
+@media (max-width: 768px) {
+        /* Allow the Hero to grow if text is long */
+        .hero {
+            height: auto !important;
+            min-height: 90vh !important;
+            padding: 120px 5% 60px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
+
+        /* Fix the overlap for the buttons */
+        .hero div[style*="flex"] {
+            margin-top: 30px !important;
+            flex-direction: column !important;
+            gap: 15px !important;
+        }
+
+        /* Ensure sections don't hide under the header */
+        #about, #work, #feedback {
+            padding-top: 80px !important;
+            margin-top: 0 !important;
+        }
+    }
 
     /* LOGO CAROUSEL LOGIC */
     .logo-marquee-wrapper {
@@ -574,6 +587,7 @@
 
 </body>
 </html>
+
 
 
 
