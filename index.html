@@ -249,6 +249,68 @@
         transform: translateX(10px);
     }
     
+/* Premium Container */
+    .pricing-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 5%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
+    /* The "Fresh" Card Style */
+    .premium-card {
+        background: #111111; /* Slight lift from #0d0d0d */
+        border: 1px solid #222;
+        border-radius: 20px;
+        min-width: 300px;
+        max-width: 350px;
+        padding: 35px;
+        transition: 0.4s ease;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        scroll-snap-align: center;
+    }
+
+    /* The Glow Effect */
+    .premium-card:hover {
+        border-color: #f1c40f;
+        box-shadow: 0 0 30px rgba(241, 196, 15, 0.05);
+        transform: translateY(-5px);
+    }
+
+    /* Bullet Point Style */
+    .premium-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 25px 0;
+        flex-grow: 1;
+    }
+
+    .premium-card ul li {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Mobile Lock: Stays Horizontal */
+    @media (max-width: 768px) {
+        .pricing-container {
+            justify-content: flex-start;
+            padding: 20px 8%;
+        }
+        .premium-card {
+            min-width: 280px;
+            padding: 25px;
+        }
+    }
+
 </style>
 
 
@@ -461,8 +523,6 @@
     </section>
 
 
-
-
     <style>
        /* Animation for the Feedback Carousel */
     @keyframes scroll {
@@ -513,6 +573,111 @@
         </div>
     </div>
 </section>
+    
+    </section>
+<a href="https://wa.link/pz3w3p" 
+       style="position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; padding: 10px 15px; border-radius: 15px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; gap: 10px; transition: 0.3s;" 
+       target="_blank"
+       onmouseover="this.style.transform='scale(1.1)'"
+       onmouseout="this.style.transform='scale(1)'">
+       <span style="font-size: 20px;">  😎</span> whatsapp
+    </a>
+   <section id="about" style="padding: 60px 8%; background: #0d0d0d; border-top: 1px solid #222; text-align: left;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            
+            <h2 style="font-size: 1.8rem; line-height: 1.2; margin-bottom: 20px; font-weight: 700; color: #fff;">
+                Precision in Every Frame. <span style="color: var(--accent-yellow);">Power in Every Story.</span>
+            </h2>
+
+            <div style="max-width: 800px; color: #888; font-size: 1rem; line-height: 1.5;">
+                <p style="margin-bottom: 15px;">
+                    <strong style="color: #eee;">EDITZAAR</strong> is a high-performance post-production studio crafting documentary-grade visuals and retention-driven digital content for creators and brands worldwide.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    We merge cinematic storytelling with behavioral editing psychology — ensuring every second holds attention, builds authority, and drives measurable growth.
+                </p>
+                <p style="color: #666; font-size: 0.9rem; font-style: italic;">
+                    Because in today’s market, content is everywhere. <span style="color: var(--accent-yellow);">Impact is rare.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+<section id="services" style="background: #0d0d0d; padding: 100px 0;">
+    <h2 style="text-align: center; color: #fff; font-size: 2.5rem; margin-bottom: 10px;">Select Your <span style="color: #f1c40f;">Plan</span></h2>
+    <p style="text-align: center; color: #666; margin-bottom: 50px;">Premium post-production for elite creators.</p>
+
+    <div class="pricing-container">
+        
+        <div class="premium-card">
+            <h3 style="color: #fff; font-size: 1.5rem; margin: 0;">Shorts</h3>
+            <div style="font-size: 2rem; color: #fff; font-weight: 700; margin: 20px 0;">$XXX <span style="font-size: 0.9rem; color: #444;">/ video</span></div>
+            <a href="https://wa.link/pz3w3p" style="background: #fff; color: #000; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 700;">Get Started</a>
+            <ul>
+                <li>● Retention-First Captions</li>
+                <li>● Cinematic Sound Design</li>
+                <li>● 24h Express Delivery</li>
+            </ul>
+        </div>
+
+        <div class="premium-card" style="border-color: #f1c40f; background: #161616;">
+            <div style="color: #f1c40f; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 10px;">Most Popular</div>
+            <h3 style="color: #fff; font-size: 1.5rem; margin: 0;">Documentary</h3>
+            <div style="font-size: 2rem; color: #fff; font-weight: 700; margin: 20px 0;">$XXX <span style="font-size: 0.9rem; color: #444;">/ video</span></div>
+            <a href="https://wa.link/pz3w3p" style="background: #f1c40f; color: #000; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 700;">Upgrade to Pro</a>
+            <p style="color: #fff; font-size: 0.8rem; margin: 20px 0 0; font-weight: 600;">Everything in Shorts, plus:</p>
+            <ul>
+                <li>● Behavioral Editing Flow</li>
+                <li>● Advanced Color Grading</li>
+                <li>● YouTube Strategy Call</li>
+            </ul>
+        </div>
+
+        <div class="premium-card">
+            <h3 style="color: #fff; font-size: 1.5rem; margin: 0;">Partnership</h3>
+            <div style="font-size: 2rem; color: #fff; font-weight: 700; margin: 20px 0;">Custom</div>
+            <a href="https://wa.link/pz3w3p" style="border: 1px solid #333; color: #fff; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 700;">Contact Us</a>
+            <p style="color: #fff; font-size: 0.8rem; margin: 20px 0 0; font-weight: 600;">Full Management:</p>
+            <ul>
+                <li>● Dedicated Editor (Slack)</li>
+                <li>● Unlimited Revisions</li>
+                <li>● Content Ideation</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+ </section>
+<a href="https://wa.link/pz3w3p" 
+       style="position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; padding: 10px 15px; border-radius: 15px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; gap: 10px; transition: 0.3s;" 
+       target="_blank"
+       onmouseover="this.style.transform='scale(1.1)'"
+       onmouseout="this.style.transform='scale(1)'">
+       <span style="font-size: 20px;">  😎</span> whatsapp
+    </a>
+   <section id="about" style="padding: 60px 8%; background: #0d0d0d; border-top: 1px solid #222; text-align: left;">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            
+            <h2 style="font-size: 1.8rem; line-height: 1.2; margin-bottom: 20px; font-weight: 700; color: #fff;">
+                Precision in Every Frame. <span style="color: var(--accent-yellow);">Power in Every Story.</span>
+            </h2>
+
+            <div style="max-width: 800px; color: #888; font-size: 1rem; line-height: 1.5;">
+                <p style="margin-bottom: 15px;">
+                    <strong style="color: #eee;">EDITZAAR</strong> is a high-performance post-production studio crafting documentary-grade visuals and retention-driven digital content for creators and brands worldwide.
+                </p>
+                <p style="margin-bottom: 15px;">
+                    We merge cinematic storytelling with behavioral editing psychology — ensuring every second holds attention, builds authority, and drives measurable growth.
+                </p>
+                <p style="color: #666; font-size: 0.9rem; font-style: italic;">
+                    Because in today’s market, content is everywhere. <span style="color: var(--accent-yellow);">Impact is rare.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
 
 <section id="feedback" style="padding: 60px 0; background: #0d0d0d; overflow: hidden; position: relative; border-top: 1px solid #111;">
         
@@ -583,83 +748,7 @@
             </div>
         </div>
     </section>
-    
-    </section>
-<a href="https://wa.link/pz3w3p" 
-       style="position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: white; padding: 10px 15px; border-radius: 15px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; gap: 10px; transition: 0.3s;" 
-       target="_blank"
-       onmouseover="this.style.transform='scale(1.1)'"
-       onmouseout="this.style.transform='scale(1)'">
-       <span style="font-size: 20px;">  😎</span> whatsapp
-    </a>
-   <section id="about" style="padding: 60px 8%; background: #0d0d0d; border-top: 1px solid #222; text-align: left;">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            
-            <h2 style="font-size: 1.8rem; line-height: 1.2; margin-bottom: 20px; font-weight: 700; color: #fff;">
-                Precision in Every Frame. <span style="color: var(--accent-yellow);">Power in Every Story.</span>
-            </h2>
 
-            <div style="max-width: 800px; color: #888; font-size: 1rem; line-height: 1.5;">
-                <p style="margin-bottom: 15px;">
-                    <strong style="color: #eee;">EDITZAAR</strong> is a high-performance post-production studio crafting documentary-grade visuals and retention-driven digital content for creators and brands worldwide.
-                </p>
-                <p style="margin-bottom: 15px;">
-                    We merge cinematic storytelling with behavioral editing psychology — ensuring every second holds attention, builds authority, and drives measurable growth.
-                </p>
-                <p style="color: #666; font-size: 0.9rem; font-style: italic;">
-                    Because in today’s market, content is everywhere. <span style="color: var(--accent-yellow);">Impact is rare.</span>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" style="background: #0d0d0d; padding: 100px 5%; border-top: 1px solid #1a1a1a; text-align: center;">
-    <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 50px;">Service <span style="color: var(--accent-yellow);">Tiers</span></h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
-        
-        <div class="service-card">
-            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 10px;">The Reel Edit</h3>
-            <p style="color: #666; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px;">Short-Form Growth</p>
-            <div style="font-size: 2.2rem; color: var(--accent-yellow); font-weight: 800; margin-bottom: 30px;">$XXX</div>
-            
-            <ul style="text-align: left; list-style: none; color: #888; font-size: 0.9rem; margin-bottom: 40px; padding-left: 0;">
-                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> High-Retention Captions</li>
-                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Dynamic Sound Design</li>
-                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> 24-48 Hour Delivery</li>
-            </ul>
-            <a href="https://wa.link/pz3w3p" style="display: block; padding: 15px; border: 1px solid #333; color: #fff; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s;">GET STARTED</a>
-        </div>
-
-        <div class="service-card" style="border: 2px solid #f1c40f; transform: scale(1.02); z-index: 5;">
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: #f1c40f; animation: shimmer-gold 2s infinite;"></div>
-            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 10px;">Documentary Pro</h3>
-            <p style="color: #666; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px;">Authority Content</p>
-            <div style="font-size: 2.2rem; color: var(--accent-yellow); font-weight: 800; margin-bottom: 30px;">$XXX</div>
-            
-            <ul style="text-align: left; list-style: none; color: #888; font-size: 0.9rem; margin-bottom: 40px; padding-left: 0;">
-                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Behavioral Psychology Flow</li>
-                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Advanced Color Grading</li>
-                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Custom Motion Graphics</li>
-            </ul>
-            <a href="https://wa.link/pz3w3p" class="shimmer-btn" style="display: block; padding: 15px; color: #000; text-decoration: none; border-radius: 5px; font-weight: 700;">CHOOSE PACKAGE</a>
-        </div>
-
-        <div class="service-card">
-            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 10px;">The Authority</h3>
-            <p style="color: #666; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px;">Monthly Retainer</p>
-            <div style="font-size: 2.2rem; color: var(--accent-yellow); font-weight: 800; margin-bottom: 30px;">Custom</div>
-            
-            <ul style="text-align: left; list-style: none; color: #888; font-size: 0.9rem; margin-bottom: 40px; padding-left: 0;">
-                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Full Strategy + Editing</li>
-                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Dedicated Slack Channel</li>
-                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Unlimited Revisions</li>
-            </ul>
-            <a href="https://wa.link/pz3w3p" style="display: block; padding: 15px; border: 1px solid #333; color: #fff; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s;">BOOK CALL</a>
-        </div>
-
-    </div>
-</section>
 
 <section style="background: #0d0d0d; border-top: 1px solid #f7e4e4; padding: 25px 0; overflow: hidden; width: 100%;">
     <p style="text-align: center; color: #ffffff; font-family: monospace; font-size: 10px; letter-spacing: 3px; margin-bottom: 15px; text-transform: uppercase;">PARTNERSHIPS</p>
@@ -689,7 +778,6 @@
 
         </div>
     </div>
-
 
     
 <footer style="padding: 60px 5% 40px; background: #0d0d0d; text-align: center; border-top: 1px solid #222;">
