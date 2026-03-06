@@ -219,6 +219,35 @@
         background-size: 200% auto !important;
         animation: shimmer-gold 4s infinite linear;
     }
+
+    /* SERVICE CARD ANIMATIONS */
+    .service-card {
+        background: #111;
+        border: 1px solid #222;
+        padding: 40px;
+        border-radius: 15px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .service-card:hover {
+        transform: translateY(-15px);
+        border-color: #f1c40f;
+        box-shadow: 0 20px 40px rgba(241, 196, 15, 0.15);
+    }
+
+    /* Animated Checkmarks */
+    .service-card ul li {
+        margin-bottom: 15px;
+        transition: 0.3s;
+        opacity: 0.8;
+    }
+
+    .service-card:hover ul li {
+        opacity: 1;
+        transform: translateX(10px);
+    }
     
 </style>
 
@@ -432,34 +461,7 @@
     </section>
 
 
-<section style="background: #0d0d0d; border-top: 1px solid #f7e4e4; padding: 25px 0; overflow: hidden; width: 100%;">
-    <p style="text-align: center; color: #ffffff; font-family: monospace; font-size: 10px; letter-spacing: 3px; margin-bottom: 15px; text-transform: uppercase;">PARTNERSHIPS</p>
-    
-    <div style="display: flex; width: 100%; animation: logoSlide 50s linear infinite;">
-        <div style="display: flex; justify-content: space-around; width: 100%; align-items: center; gap: 70px;">
-            <img src="s1.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s2.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s3.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s4.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s5.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s6.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s7.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s8.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s9.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s10.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s11.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s12.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s13.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s14.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s15.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s16.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s17.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s18.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s19.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
-            <img src="s20.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
 
-        </div>
-    </div>
 
     <style>
        /* Animation for the Feedback Carousel */
@@ -610,6 +612,84 @@
             </div>
         </div>
     </section>
+
+    <section id="services" style="background: #0d0d0d; padding: 100px 5%; border-top: 1px solid #1a1a1a; text-align: center;">
+    <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 50px;">Service <span style="color: var(--accent-yellow);">Tiers</span></h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="service-card">
+            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 10px;">The Reel Edit</h3>
+            <p style="color: #666; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px;">Short-Form Growth</p>
+            <div style="font-size: 2.2rem; color: var(--accent-yellow); font-weight: 800; margin-bottom: 30px;">$XXX</div>
+            
+            <ul style="text-align: left; list-style: none; color: #888; font-size: 0.9rem; margin-bottom: 40px; padding-left: 0;">
+                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> High-Retention Captions</li>
+                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Dynamic Sound Design</li>
+                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> 24-48 Hour Delivery</li>
+            </ul>
+            <a href="https://wa.link/pz3w3p" style="display: block; padding: 15px; border: 1px solid #333; color: #fff; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s;">GET STARTED</a>
+        </div>
+
+        <div class="service-card" style="border: 2px solid #f1c40f; transform: scale(1.02); z-index: 5;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: #f1c40f; animation: shimmer-gold 2s infinite;"></div>
+            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 10px;">Documentary Pro</h3>
+            <p style="color: #666; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px;">Authority Content</p>
+            <div style="font-size: 2.2rem; color: var(--accent-yellow); font-weight: 800; margin-bottom: 30px;">$XXX</div>
+            
+            <ul style="text-align: left; list-style: none; color: #888; font-size: 0.9rem; margin-bottom: 40px; padding-left: 0;">
+                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Behavioral Psychology Flow</li>
+                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Advanced Color Grading</li>
+                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Custom Motion Graphics</li>
+            </ul>
+            <a href="https://wa.link/pz3w3p" class="shimmer-btn" style="display: block; padding: 15px; color: #000; text-decoration: none; border-radius: 5px; font-weight: 700;">CHOOSE PACKAGE</a>
+        </div>
+
+        <div class="service-card">
+            <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 10px;">The Authority</h3>
+            <p style="color: #666; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px;">Monthly Retainer</p>
+            <div style="font-size: 2.2rem; color: var(--accent-yellow); font-weight: 800; margin-bottom: 30px;">Custom</div>
+            
+            <ul style="text-align: left; list-style: none; color: #888; font-size: 0.9rem; margin-bottom: 40px; padding-left: 0;">
+                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Full Strategy + Editing</li>
+                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Dedicated Slack Channel</li>
+                <li><span style="color: #f1c40f; margin-right: 10px;">→</span> Unlimited Revisions</li>
+            </ul>
+            <a href="https://wa.link/pz3w3p" style="display: block; padding: 15px; border: 1px solid #333; color: #fff; text-decoration: none; border-radius: 5px; font-weight: 700; transition: 0.3s;">BOOK CALL</a>
+        </div>
+
+    </div>
+</section>
+
+<section style="background: #0d0d0d; border-top: 1px solid #f7e4e4; padding: 25px 0; overflow: hidden; width: 100%;">
+    <p style="text-align: center; color: #ffffff; font-family: monospace; font-size: 10px; letter-spacing: 3px; margin-bottom: 15px; text-transform: uppercase;">PARTNERSHIPS</p>
+    
+    <div style="display: flex; width: 100%; animation: logoSlide 50s linear infinite;">
+        <div style="display: flex; justify-content: space-around; width: 100%; align-items: center; gap: 70px;">
+            <img src="s1.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s2.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s3.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s4.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s5.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s6.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s7.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s8.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s9.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s10.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s11.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s12.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s13.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s14.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s15.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s16.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s17.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s18.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s19.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+            <img src="s20.png" style="height: 30px; opacity: 0.9; filter: grayscale(1);">
+
+        </div>
+    </div>
+
 
     
 <footer style="padding: 60px 5% 40px; background: #0d0d0d; text-align: center; border-top: 1px solid #222;">
