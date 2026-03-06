@@ -202,6 +202,24 @@
             height: 100vh !important;
         }
     }
+/* NEW ANIMATIONS FOR CTA SECTION */
+    @keyframes pulse-green {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(46, 204, 113, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+    }
+
+    @keyframes shimmer-gold {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+    }
+
+    .shimmer-btn {
+        background: linear-gradient(90deg, #f1c40f 0%, #f7e482 50%, #f1c40f 100%) !important;
+        background-size: 200% auto !important;
+        animation: shimmer-gold 4s infinite linear;
+    }
+    
 </style>
 
 
@@ -464,6 +482,36 @@
     </style>
 </section>
 
+            <section style="background: #0d0d0d; padding: 100px 8%; border-top: 1px solid #1a1a1a; text-align: center;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+        
+        <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 30px;">
+            <span style="height: 10px; width: 10px; background-color: #2ecc71; border-radius: 50%; display: inline-block; animation: pulse-green 2s infinite;"></span>
+            <span style="color: #666; font-family: monospace; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;">System Online // Accepting 2 New Clients</span>
+        </div>
+
+        <h2 style="font-size: clamp(2.2rem, 5vw, 3.5rem); color: #fff; line-height: 1.1; margin-bottom: 25px; font-weight: 800; letter-spacing: -1.5px;">
+            Precision in Every Frame. <br>
+            <span style="color: var(--accent-yellow);">Power in Every Story.</span>
+        </h2>
+
+        <div style="max-width: 800px; margin: 0 auto 50px; color: #888; font-size: 1.1rem; line-height: 1.8; font-weight: 300;">
+            <p style="margin-bottom: 20px;">
+                <strong style="color: #fff;">EDITZAAR</strong> merges cinematic storytelling with behavioral psychology — ensuring every second holds attention and builds measurable authority.
+            </p>
+        </div>
+
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; width: 100%;">
+            <a href="https://wa.link/pz3w3p" target="_blank" class="shimmer-btn" style="color: #000; padding: 20px 45px; border-radius: 5px; text-decoration: none; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; min-width: 300px; box-shadow: 0 10px 30px rgba(241, 196, 15, 0.2);">
+                Book Your Free Strategy Call
+            </a>
+            <a href="#work" style="color: #fff; padding: 20px 45px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 1px solid #333; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; background: rgba(255,255,255,0.03); min-width: 300px; transition: 0.3s;">
+                View Portfolio Breakdowns
+            </a>
+        </div>
+    </div>
+</section>
+
 <section id="feedback" style="padding: 60px 0; background: #0d0d0d; overflow: hidden; position: relative; border-top: 1px solid #111;">
         
         <div style="text-align: center; margin-bottom: 40px; padding: 0 5%;">
@@ -562,14 +610,7 @@
             </div>
         </div>
     </section>
-<div style="display: flex; gap: 5px; margin-top: 10px; flex-wrap: wrap; justify-content: center; width: 50%; background: #0d0d0d; ">
-    <a href="https://wa.link/pz3w3p" target="_blank" style="background: var(--accent-yellow); color: #0d0d0d; padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; min-width: 280px; text-align: center;">
-        Book Your Free Strategy Call
-    </a>
-    <a href="#work" style="color: #fff; padding: 15px 35px; text-decoration: none; font-weight: 600; font-size: 0.9rem; border: 1px solid #333; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; background: rgba(255,255,255,0.03); min-width: 280px; text-align: center;">
-        View Sample Breakdowns
-    </a>
-</div>
+
     
 <footer style="padding: 60px 5% 40px; background: #0d0d0d; text-align: center; border-top: 1px solid #222;">
         
@@ -594,6 +635,7 @@
 
 </body>
 </html>
+
 
 
 
