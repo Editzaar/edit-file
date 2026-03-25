@@ -2,23 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Terms & Conditions | Editzaar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal | Editzaar</title>
     <style>
-        body { background: #0d0d0d; color: #fff; font-family: sans-serif; padding: 50px; line-height: 1.6; }
-        .container { max-width: 800px; margin: auto; }
-        h1 { color: #ffcc00; } /* Matches your accent-yellow */
+        :root { --accent: #ffcc00; --bg: #0d0d0d; --text: #a6a6a6; }
+        body { background: var(--bg); color: #fff; font-family: 'Inter', sans-serif; line-height: 1.8; padding: 10% 5%; }
+        .container { max-width: 800px; margin: auto; border-left: 1px solid #222; padding-left: 30px; }
+        h1 { font-size: 2.5rem; color: var(--accent); letter-spacing: -1px; margin-bottom: 40px; }
+        h2 { color: #fff; margin-top: 40px; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
+        p, li { color: var(--text); font-size: 1rem; }
+        .back-btn { display: inline-block; margin-top: 50px; color: var(--accent); text-decoration: none; font-weight: bold; border-bottom: 1px solid var(--accent); }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Terms & Conditions</h1>
-        <p>Welcome to Editzaar. By hiring us, you agree to:</p>
-        <ul>
-            <li><strong>Revisions:</strong> 2 free rounds of revisions per project.</li>
-            <li><strong>Payment:</strong> 50% upfront for new clients.</li>
-            <li><strong>Usage:</strong> We reserve the right to show edited clips in our portfolio.</li>
-        </ul>
-        <a href="index.html" style="color: #ffcc00;">← Back to Home</a>
+        <h1>Agency Terms</h1>
+        
+        <h2>01. Creative Authority</h2>
+        <p>Editzaar maintains creative direction over pacing and style unless a specific storyboard is provided. We aim for the "Editzaar Signature" look in every frame.</p>
+
+        <h2>02. Revision Luxury</h2>
+        <p>Every project includes two (2) complimentary Refinement Rounds. Major structural changes after the second round will incur an additional 20% project fee.</p>
+
+        <h2>03. Intellectual Property</h2>
+        <p>Upon final payment, the client owns the final exported video. Editzaar retains the right to use the footage for agency promotion unless an "Exclusivity NDA" is signed.</p>
+
+        <a href="index.html" class="back-btn">RETURN TO HOME</a>
     </div>
 </body>
 </html>
